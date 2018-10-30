@@ -2,6 +2,9 @@ const server = require('./app');
 
 
 
-server.listen(8080, function() {
-  console.log(`Server is listening on https://localhost8080`)
+
+
+server.listen(process.env.PORT || 5000, function() {
+  console.log(`Server is listening on https://localhost5000`)
 })
+
