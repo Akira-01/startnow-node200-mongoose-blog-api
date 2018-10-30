@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
-mongoose.connect('mongodb://localhost/my-blog', { useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/my-blog', { useNewUrlParser: true });
 mongoose.Promise = Promise;
 
 // app.use(morgan('dev', {
